@@ -1,0 +1,16 @@
+24.02.2024
+#length of words in list
+List=list(map(str,input().split()))
+[print(len(i)) for i in li]
+
+#replace comma with decimal point and find maximum
+List=list(map(str,input().split()))
+updated_list=[float(i.replace(',','.')) for i in List]
+print(max(updated_list))
+
+#Get n as input from the user, create a list which has elements from n and ends at its square. Separate the odd and even numbers from the list and save them in separate lists and print from the beginning to the nth element in each list (both odd and even).
+n=int(input())
+List=[i for i in range(n,n*n+1)]
+odd_list=[i for i in List if i%2==1]
+even_list=[i for i in List if i%2==0]
+print(odd_list,even_list)
