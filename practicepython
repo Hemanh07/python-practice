@@ -14,3 +14,75 @@ List=[i for i in range(n,n*n+1)]
 odd_list=[i for i in List if i%2==1]
 even_list=[i for i in List if i%2==0]
 print(odd_list,even_list)
+
+25.02.2024
+
+n_minutes=int(input())
+sum=0
+hour=n_minutes//60
+minutes=n_minutes%60
+total=str(hour)+str(minutes)
+for i in total:
+    sum+=int(i)
+print(f"{hour}: {minutes}\n",sum)
+ 
+
+row=int(input("enter no of rows:"))
+col=int(input("enter no of columns"))
+array=[[int(input(f"enter{i+1}:{j+1} => ")) for j in range(col)] for i in range(row)]
+number=int(input())
+for i in array:
+    if number in i:
+        print(f"Row:{array.index(i)+1} \nColumn:{i.index(number)+1}")
+output:
+enter no of rows:3
+enter no of columns3
+enter1:1 => 1
+enter1:2 => 3
+enter1:3 => 7
+enter2:1 => 5
+enter2:2 => 6
+enter2:3 => 9
+enter3:1 => 8
+enter3:2 => 2
+enter3:3 => 0
+2
+Row:3
+Column:2
+
+
+ import operator
+opts={
+    '+':operator.add,
+    '-':operator.sub,
+    '*':operator.mul,
+    '/':operator.truediv
+}
+a=int(input("enter value of a: "))
+b=int(input("enter value of b: "))
+c=int(input("enter value of c: "))
+equation=f'+-*/'
+for i in equation:
+    if opts[i](a,b)==c:
+        print("equation satisfied with",i)
+        break
+else:
+    print("equation not satisfied")'
+output:
+enter value of a: 6
+enter value of b: 3
+enter value of c: 2
+equation satisfied with / 
+
+
+ exp=int(input("enter your experience:"))
+reward=int(input("enter your rewards: "))
+threshold=int(input("enter your threshold :"))
+if exp+reward >= threshold:print("true")
+else:print('false')
+output:
+enter your experience:10
+enter your rewards: 5
+enter your threshold :15
+true 
+
